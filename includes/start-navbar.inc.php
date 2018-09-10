@@ -23,10 +23,10 @@
         </h1>
         <nav class="col-md-5">
           <ul>
-            <li>All bets</li>
-            <li>Betting tips</li>
-            <li>About</li>
-            <li>How to play</li>
+            <li><a href="#">All bets</a></li>
+            <li><a href="#">Betting tips</a></li>
+            <li><a href="./about.php">About</a></li>
+            <li><a href="#">How to play</a></li>
           </ul>
         </nav>
         <?php if(!isset($_SESSION['user_id'])) : ?>

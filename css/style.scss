@@ -71,7 +71,7 @@ nav > ul {
   justify-content: space-around;
   margin: 0;
 }
-nav > ul > li {
+nav > ul > li > a {
   font-family: 'Palanquin', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -79,7 +79,7 @@ nav > ul > li {
   padding: 0.5rem;
   transition: color 0.1s, background-color 0.1s;
 }
-nav > ul > li:hover {
+nav > ul > li >a:hover {
   color: $bg4;
   background-color: #fff;
   text-decoration: underline $bg4;

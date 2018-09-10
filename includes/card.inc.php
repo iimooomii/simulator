@@ -53,7 +53,6 @@ if (!isset($_SESSION['bet_final'])) {
           </div> -->
 
 
-
           <div class="row cardb-items-end">
             <div class="col-md-12 cardb-final">
               <div>Final odd</div>
@@ -63,6 +62,7 @@ if (!isset($_SESSION['bet_final'])) {
           <form class="row" method="POST" action="../bet-query.php">
             <div class="col-md-12 cardb-bet">
               <div>Your bet:</div>
+              <!-- Kas čia darosi??? -->
               <input type="number" name="bet" align="right" type="number" step="0.01" min="1" max="<?php echo cash(); ?>">
             </div>
             <div class="col-md-12 cardb-cash"><span><?php if(isset($_SESSION['user_id'])){echo 'Max: '.cash();}else{echo 'Log in to make a bet!';} ?></span></div>
