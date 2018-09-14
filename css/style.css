@@ -526,6 +526,10 @@ footer {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+.about-content {
+  background-color: #97baa4;
+  color: #232941; }
+
 .register-form {
   display: -webkit-box;
   display: -ms-flexbox;
