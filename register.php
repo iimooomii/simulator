@@ -13,7 +13,7 @@ include_once('includes/aside.inc.php');
                         Create account to explore free betting!
                     </div>
                 </div>
-                <img class="odds-flag odds-flag-large" src="./images/<?php echo $leagueInfo['country_flag'] ?>.png" alt="">
+                <img class="odds-flag odds-flag-large" src="" alt="">
             </div>
         </div>
     </div>

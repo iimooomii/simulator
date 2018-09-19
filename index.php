@@ -14,20 +14,6 @@ include_once('includes/aside.inc.php');
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12 mb-4 odds d-none">
-      <div class="row">
-        <div class="col-md-12 odds-h1 odds-h1-large">
-          <div class="mb-2">England</div>
-          <div class="odds-upcoming">
-            <span class="odds-upcoming-count">12</span>
-            upcoming matches
-          </div>
-        </div>
-        <img class="odds-flag odds-flag-large" src="./images/england.png" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="row">
     <div class="col-md-12 offer mb-4">
       <div class="row">
         <div class="col-md-12 offer-h1">
@@ -88,7 +74,7 @@ include_once('includes/aside.inc.php');
         <div class="col-md-12 odds-h1">
           <?php echo $mainDataArray['country']; ?>
         </div>
-        <img class="odds-flag" src="./images/<?php echo $mainDataArray['country_flag']; ?>.png" alt="">
+        <img class="odds-flag" src="./images/<?php echo $mainDataArray['country_flag']; ?>.png" alt="<?=$mainDataArray['country_flag']?>">
       </div>
 
       <?php
@@ -152,7 +138,7 @@ include_once('includes/aside.inc.php');
         <div class="col-md-12 odds-h1">
           Germany
         </div>
-        <img class="odds-flag" src="./images/germany.png" alt="">
+        <img class="odds-flag" src="./images/germany.png" alt="germany">
       </div>
     </div>
   </div>

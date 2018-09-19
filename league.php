@@ -28,7 +28,7 @@ $timeDiff = $utc - $leagueInfo['timezone'];
             upcoming matches
           </div>
         </div>
-        <img class="odds-flag odds-flag-large" src="./images/<?php echo $leagueInfo['country_flag'] ?>.png" alt="">
+        <img class="odds-flag odds-flag-large" src="./images/<?php echo $leagueInfo['country_flag'] ?>.png" alt="<?=$leagueInfo['country_flag']?>">
       </div>
     </div>
   </div>
