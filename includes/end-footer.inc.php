@@ -1,4 +1,4 @@
-</main>
+      </main>
       <footer class="row p-3 mt-4">
         <div class="">&copy; 2018</div>
         <div class="">This website is made for learning purposes only. All bets are simulation without using real money.</div>

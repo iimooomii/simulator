@@ -51,7 +51,6 @@ $row['date'] = substr((string)$row['date'], 5);
 $row['time'] = substr((string)$row['time'], 0, 5);
 $cardbEnd = count($_SESSION['cardb']) - 1;
 
-// $_SESSION['cardb'][$cardbEnd] = array('date' => '', 'time' => '', 'team_h' => '', 'team_a' => '', 'team_selected' => '');
 $_SESSION['cardb'][$cardbEnd]['date'] = $row['date'];
 $_SESSION['cardb'][$cardbEnd]['time'] = $row['time'];
 $_SESSION['cardb'][$cardbEnd]['team_h'] = $row['team_h'];
@@ -64,9 +63,6 @@ if ($oddTeamSign == 'x') {
 $_SESSION['cardb'][$cardbEnd]['timezone'] = $row['timezone'];
 $_SESSION['cardb'][$cardbEnd]['team_sign'] = $oddTeamSign;
 
-// if (!isset($_SESSION['bet_final']['odd'])) {
-//   $_SESSION['bet_final']['odd'] = 1;
-// }
 $_SESSION['bet_final']['odd'] *= $_SESSION['cardb'][$cardbEnd]['odd'];
 $_SESSION['bet_final']['odd'] = round($_SESSION['bet_final']['odd'], 2);
 ?>

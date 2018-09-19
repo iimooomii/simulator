@@ -6,7 +6,7 @@ include_once('includes/aside.inc.php');
 
 <div class="col-md">
 
-<?php
+    <?php
 $sql = "SELECT bets.date, bets.bet_amount, bets.final_odd, bets.result, bets.odd_1, bets.odd_2, bets.odd_3, bets.odd_4, bets.odd_5, bets.match_1_id, bets.match_2_id, bets.match_3_id, bets.match_4_id, bets.match_5_id
         FROM bets
         WHERE bets.user_id = ".$_SESSION['user_id']."
@@ -52,38 +52,52 @@ while ($row1 = mysqli_fetch_assoc($result1)) :
 ?>
 
 
-    <div class="row bet-info p-1 bet-info-waiting">
-        <div class="col-8 d-none">
-            <div class="row">
-                <div class="col-12"><?php echo $row1['date']; ?></div>
+<div class="row bet-info p-1 bet-info-waiting">
+    <div class="col-8 d-none">
+        <div class="row">
+            <div class="col-12">
+                <?php echo $row1['date']; ?>
             </div>
-            <div class="row">
-                <div class="col-12 d-flex flex-row align-items-center">
-                    <div class="mr-2">Juventus - 1.47</div>
-                    <div class="rem75"><?php echo $row21['date'].' '.$row21['time'].' '.$row21['team_h_id'].' X '.$row21['team_a_id'] ?></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-flex flex-row align-items-center">
-                    <div class="mr-2">Juventus - 1.47</div>
-                    <div class="rem75">07-20 19:00 Juventus X Napoli</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-flex flex-row align-items-center">
-                    <div class="mr-2">Juventus - 1.47</div>
-                    <div class="rem75">07-20 19:00 Juventus X Napoli</div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center">
+                <div class="mr-2">Juventus - 1.47</div>
+                <div class="rem75">
+                    <?php echo $row21['date'].' '.$row21['time'].' '.$row21['team_h_id'].' X '.$row21['team_a_id'] ?>
                 </div>
             </div>
         </div>
-        <div class="col-4 d-flex flex-column align-items-start justify-content-end">
-            <div><?php echo $row1['date']; ?></div>
-            <div>Bet: <?php echo $row1['bet_amount']; ?></div>
-            <div>Final odd: <?php echo $row1['final_odd']; ?></div>            
-            <div>Possible winning: <?php echo ($row1['bet_amount'] * $row1['final_odd']); ?></div>
-            <div>Result: <?php if ($row1['result'] === 1) {echo "Won";} elseif ($row1['result'] === 0) {echo "Lost";} else {echo "Waiting";}?></div>
+        <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center">
+                <div class="mr-2">Juventus - 1.47</div>
+                <div class="rem75">07-20 19:00 Juventus X Napoli</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center">
+                <div class="mr-2">Juventus - 1.47</div>
+                <div class="rem75">07-20 19:00 Juventus X Napoli</div>
+            </div>
         </div>
     </div>
+    <div class="col-4 d-flex flex-column align-items-start justify-content-end">
+        <div>
+            <?php echo $row1['date']; ?>
+        </div>
+        <div>Bet:
+            <?php echo $row1['bet_amount']; ?>
+        </div>
+        <div>Final odd:
+            <?php echo $row1['final_odd']; ?>
+        </div>
+        <div>Possible winning:
+            <?php echo ($row1['bet_amount'] * $row1['final_odd']); ?>
+        </div>
+        <div>Result:
+            <?php if ($row1['result'] === 1) {echo "Won";} elseif ($row1['result'] === 0) {echo "Lost";} else {echo "Waiting";}?>
+        </div>
+    </div>
+</div>
 
 
 <?php
